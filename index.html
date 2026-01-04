@@ -15,7 +15,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="register.html">Register</a></li>
                 <li><a href="login.html">Log in</a></li>
-                <li><a href="cart.html">Cart</a></li>
+                <li><a href="cart.html">  🛒 <span id="cart-count">0</span></a></li>
             </ul>
         </nav>
     </header>
@@ -31,7 +31,7 @@
             <h3>iPhone 17 Pro</h3>
             <p>Latest Apple smartphone.</p>
             <p class="price">5000 PLN</p>
-            <button>Add to cart</button>
+            <button class="add-to-cart" data-id="iphone17" data-name="iPhone 17 Pro" data-price="5000">Add to cart</button>
         </article>
 
         <article class="product-card">
@@ -39,7 +39,7 @@
             <h3>iPhone 16</h3>
             <p>Powerful and modern smartphone.</p>
             <p class="price">4200 PLN</p>
-            <button>Add to cart</button>
+            <button class="add-to-cart" data-id="iphone16" data-name="iPhone 16" data-price="4200">Add to cart</button>
         </article>
 
         <article class="product-card">
@@ -47,7 +47,7 @@
             <h3>AirPods</h3>
             <p>Wireless Apple headphones.</p>
             <p class="price">800 PLN</p>
-            <button>Add to cart</button>
+            <button class="add-to-cart" data-id="airpods" data-name="Airpods" data-price="800">Add to cart</button>
         </article>
 
         <article class="product-card">
@@ -55,7 +55,7 @@
             <h3>AirPods Pro</h3>
             <p>Noise cancelling earbuds.</p>
             <p class="price">1200 PLN</p>
-            <button>Add to cart</button>
+            <button class="add-to-cart" data-id="airpodspro" data-name="Airpods Pro" data-price="1200">Add to cart</button>
         </article>
 
         <article class="product-card">
@@ -63,7 +63,7 @@
             <h3>HomePod Mini</h3>
             <p>Smart speaker for your home.</p>
             <p class="price">600 PLN</p>
-            <button>Add to cart</button>
+            <button class="add-to-cart" data-id="homepodmin" data-name="HomePod Mini" data-price="600">Add to cart</button>
         </article>
 
         <article class="product-card">
@@ -71,7 +71,7 @@
             <h3>Apple Watch Series 9</h3>
             <p>Smartwatch with health tracking.</p>
             <p class="price">1900 PLN</p>
-            <button>Add to cart</button>
+            <button class="add-to-cart" data-id="applewatchs9" data-name="Apple Watch Sries 9" data-price="1900">Add to cart</button>
         </article>
 
         <article class="product-card">
@@ -79,7 +79,7 @@
             <h3>Apple Watch SE</h3>
             <p>Affordable Apple smartwatch.</p>
             <p class="price">1400 PLN</p>
-            <button>Add to cart</button>
+            <button class="add-to-cart" data-id="applewatchse" data-name="Apple Watch SE" data-price="1400">Add to cart</button>
         </article>
 
         <article class="product-card">
@@ -87,7 +87,7 @@
             <h3>MacBook Air M2</h3>
             <p>Lightweight laptop.</p>
             <p class="price">5500 PLN</p>
-            <button>Add to cart</button>
+            <button class="add-to-cart" data-id="macbookair" data-name="MacBook Air M2" data-price="5500">Add to cart</button>
         </article>
 
         <article class="product-card">
@@ -95,7 +95,7 @@
             <h3>MacBook Pro 14"</h3>
             <p>Professional laptop.</p>
             <p class="price">9000 PLN</p>
-            <button>Add to cart</button>
+            <button class="add-to-cart" data-id="macbookpro14" data-name="MacBook Pro 14" data-price="9000">Add to cart</button>
         </article>
 
         <article class="product-card">
@@ -103,7 +103,7 @@
             <h3>MacBook Pro 16"</h3>
             <p>High performance workstation.</p>
             <p class="price">11500 PLN</p>
-            <button>Add to cart</button>
+            <button class="add-to-cart" data-id="macbookpro16" data-name="MacBook Pro 16" data-price="11500">Add to cart</button>
         </article>
 
         <article class="product-card">
@@ -111,7 +111,7 @@
             <h3>iPad Pro</h3>
             <p>Tablet for professionals.</p>
             <p class="price">4800 PLN</p>
-            <button>Add to cart</button>
+            <button class="add-to-cart" data-id="ipadpro" data-name="iPad Pro" data-price="4800">Add to cart</button>
         </article>
 
         <article class="product-card">
@@ -119,7 +119,7 @@
             <h3>iPad Air</h3>
             <p>Light and powerful tablet.</p>
             <p class="price">3200 PLN</p>
-            <button>Add to cart</button>
+            <button class="add-to-cart" data-id="ipadair" data-name="iPad Air" data-price="3200">Add to cart</button>
         </article>
 
         <article class="product-card">
@@ -127,7 +127,7 @@
             <h3>iPad Mini</h3>
             <p>Compact tablet.</p>
             <p class="price">2600 PLN</p>
-            <button>Add to cart</button>
+            <button class="add-to-cart" data-id="ipadmini" data-name="iPad Mini" data-price="2600">Add to cart</button>
         </article>
 
         <article class="product-card">
@@ -135,7 +135,7 @@
             <h3>Magic Mouse</h3>
             <p>Apple wireless mouse.</p>
             <p class="price">400 PLN</p>
-            <button>Add to cart</button>
+            <button class="add-to-cart" data-id="magicmouse" data-name="Magic Mouse" data-price="400">Add to cart</button>
         </article>
 
         </section>
@@ -147,6 +147,7 @@
     <footer>
         <p>&copy; 2026 Simple Shop. Educational project. Markiian Zderka</p>
     </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
+

@@ -5,7 +5,10 @@
     <title>Register - Simple Shop</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+
 
 <header>
     <h1>Simple Shop</h1>
@@ -24,31 +27,37 @@
 
     <form action="register.php" method="post" id="registerForm">
 
-        <label for="username">Username</label>
-        <input type="text" id="username" name="username" required>
+        <input type="text" id="username" name="username" placeholder="Username">
+        <div class="error" id="usernameError"></div>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" placeholder="Email">
+        <div class="error" id="emailError"></div>
 
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" required>
+        <input type="password" id="password" name="password" placeholder="Enter your password">
+        <div class="error" id="passwordError"></div>
 
-        <label for="confirm_password">Confirm password</label>
-        <input type="password" id="confirm_password" name="confirm_password" required>
+        <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your password">
+        <div class="error" id="confirmPasswordError"></div>
+
+        <select id="country" name="country">
+            <option value="" disabled selected>Select your country</option>
+            <option value="pl">Poland</option>
+            <option value="ua">Ukraine</option>
+            <option value="de">Germany</option>
+            <option value="other">Other</option>
+        </select>
+
+        <div class="error" id="countryError"></div>
+
 
         <div class="checkbox-row">
             <span>I agree to the terms and conditions</span>
-            <input type="checkbox" name="terms" required>
+            <input type="checkbox" id="terms" name="terms" >
         </div>
+        <div class="error" id="termsError"></div>
 
-        <label for="country">Country</label>
-            <select id="country" name="country" required>
-                <option value="">Select country</option>
-                <option value="pl">Poland</option>
-                <option value="ua">Ukraine</option>
-                <option value="de">Germany</option>
-                <option value="other">Other</option>
-            </select>
+
+        
         <input type="hidden" name="form_type" value="register">
 
         <button type="submit">Register</button>
@@ -66,6 +75,6 @@
 <footer>
     <p>&copy; 2026 Simple Shop. Educational project.</p>
 </footer>
-
+<script src="script.js"></script>
 </body>
 </html>
