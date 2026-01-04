@@ -1,0 +1,251 @@
+/* ===== Color palette ===== */
+:root {
+    --fern: #50723c;
+    --cool-steel: #93a8ac;
+    --charcoal-blue: #243b4a;
+}
+
+/* ===== Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Base ===== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cool-steel);
+    color: #333;
+    line-height: 1.6;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ===== Header ===== */
+header {
+    background-color: var(--charcoal-blue);
+    color: #fff;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Main ===== */
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    flex: 1;
+}
+
+
+
+main h2 {
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--charcoal-blue);
+}
+
+/* ===== Products page layout ===== */
+.main-products {
+    max-width: 95%;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+
+
+
+/* ===== Products ===== */
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.product-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card h3 {
+    margin-bottom: 10px;
+    color: var(--charcoal-blue);
+}
+
+.product-card p {
+    margin-bottom: 10px;
+}
+
+.price {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.product-card button {
+    padding: 10px;
+    border: none;
+    background-color: var(--fern);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.product-card button:hover {
+    background-color: #3f5c2f;
+}
+
+/* ===== Forms ===== */
+form {
+    max-width: 420px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    font-weight: bold;
+    color: var(--charcoal-blue);
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+form input:focus {
+    outline: none;
+    border-color: var(--fern);
+}
+
+/* ===== Checkbox row ===== */
+.checkbox-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 18px;
+    font-size: 14px;
+}
+
+.checkbox-row span {
+    color: var(--charcoal-blue);
+}
+
+.checkbox-row input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+}
+
+/* ===== Buttons ===== */
+form button {
+    margin-top: 25px;
+    width: 100%;
+    padding: 12px;
+    background-color: var(--fern);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+form button:hover {
+    background-color: #3f5c2f;
+}
+
+/* ===== Form links ===== */
+.form-link {
+    text-align: center;
+    margin-top: 18px;
+}
+
+.form-link a {
+    color: var(--fern);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.form-link a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Cart ===== */
+.cart-items {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.cart-summary {
+    max-width: 420px;
+    margin-left: auto;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.cart-summary button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    background-color: var(--fern);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.cart-summary button:hover {
+    background-color: #3f5c2f;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: var(--charcoal-blue);
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 60px;
+}

@@ -1,0 +1,36 @@
+# =========================
+# OS / system files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# IDE / editor configs
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# QODO (IDE / assistant)
+# =========================
+.qodo/
+.qodo-cache/
+.qodo-workspace/
+.qodo-settings/
+
+# =========================
+# Logs & temp files
+# =========================
+*.log
+*.tmp
+*.temp
+
+# =========================
+# Environment variables
+# =========================
+.env
+
+# =========================
+# Node / frontend tools (future-proof)
+# =========================
+node_modules/
