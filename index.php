@@ -12,9 +12,13 @@
         <h1>Simple Shop</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <?php if (isset($_SESSION["user"])): ?>
+                <li>Hello, <?php echo $_SESSION["user"]; ?></li>
+                <li><a href="logout.php">Logout</a></li>
+                <?php else: ?>
                 <li><a href="register.html">Register</a></li>
                 <li><a href="login.html">Log in</a></li>
+                <?php endif; ?>
                 <li><a href="cart.html">  🛒 <span id="cart-count">0</span></a></li>
             </ul>
         </nav>
