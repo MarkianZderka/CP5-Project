@@ -8,6 +8,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const confirmPassword = document.getElementById("confirm_password");
     const country = document.getElementById("country");
     const terms = document.getElementById("terms");
+    const emailError = document.getElementById("emailError");
+
+    email.addEventListener("input", () => {
+        if (emailError.dataset.serverError === "true") {
+            delete emailError.dataset.serverError;
+            emailError.innerText = "";
+        }
+    });
+
 
     form.addEventListener("submit", function (e) {
         let isValid = true;
@@ -56,12 +65,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function showError(id, message) {
-        document.getElementById(id).innerText = message;
-    }
+    const el = document.getElementById(id);
+    el.innerText = message;
+
+    // якщо це була server-side помилка — знімаємо її
+    if (el.dataset.serverError === "true") {
+        delete el.dataset.serverError;
+    }}
+
 
     function clearErrors() {
         const errors = document.querySelectorAll(".error");
-        errors.forEach(error => error.innerText = "");
+        errors.forEach(error => {
+            if (error.dataset.serverError === "true") return;
+            error.innerText = "";
+        });
     }
 
     function validateEmail(email) {
@@ -174,4 +192,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateCartCount();
     renderCart();
+});
+
+// ===== Register error handling =====
+document.addEventListener("DOMContentLoaded", () => {
+    const params = new URLSearchParams(window.location.search);
+    const error = params.get("error");
+
+    if (error !== "email_exists") return;
+
+    const emailError = document.getElementById("emailError");
+    if (!emailError) return;
+
+    emailError.innerText = "This email is already registered.";
+
+    // ключовий рядок ↓↓↓
+    emailError.dataset.serverError = "true";
+
+    history.replaceState(null, "", window.location.pathname);
 });

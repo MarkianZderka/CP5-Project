@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +22,7 @@
                 <li><a href="register.html">Register</a></li>
                 <li><a href="login.html">Log in</a></li>
                 <?php endif; ?>
-                <li><a href="cart.html">  🛒 <span id="cart-count">0</span></a></li>
+                <li><a href="cart.php">  🛒 <span id="cart-count">0</span></a></li>
             </ul>
         </nav>
     </header>

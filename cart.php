@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,11 +13,17 @@
     <nav>
         <ul>
             <li><a href="index.php">Home</a></li>
+            <?php if (isset($_SESSION["user"])): ?>
+            <li>Hello, <?= htmlspecialchars($_SESSION["user"]) ?></li>
+            <li><a href="logout.php">Logout</a></li>
+            <?php else: ?>
             <li><a href="register.html">Register</a></li>
             <li><a href="login.html">Log in</a></li>
-            <li><a href="cart.html">Cart</a></li>
+            <?php endif; ?>
+            <li><a href="cart.php">Cart</a></li>
         </ul>
     </nav>
+
 </header>
 
 <main>
